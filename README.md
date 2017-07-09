@@ -25,7 +25,7 @@ After this, you can execute `composer update` in your project directory to insta
 The extension must be enabled in Yii's web.php by adding an entry for it in the modules section, for example:
 ```
 'modules' => [
-    'database-generator' => [
+    'h3tech-database-generator' => [
         'class' => 'h3tech\databaseGenerator\Module',
         'autogenerate' => YII_ENV_DEV || YII_ENV_TEST,
         'accessToken' => '0yppRdbnCkYnidwskUjvvhhv',
