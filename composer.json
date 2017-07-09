@@ -1,0 +1,28 @@
+{
+  "name": "h3tech/yii2-database-generator",
+  "type": "yii2-extension",
+  "description": "An easy to use extension for automatically updating database tables for models",
+  "homepage": "https://github.com/H3Tech/yii2-database-generator",
+  "keywords": [
+    "yii2",
+    "extension",
+    "database",
+    "structure",
+    "update",
+    "generator"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "h3tech\\databaseGenerator\\": ""
+    }
+  },
+  "authors": [
+    {
+      "name": "Gyula Szabó",
+      "email": "gt.szgyula@gmail.com",
+      "homepage": "https://github.com/gyula-szabo"
+    }
+  ],
+  "minimum-stability": "stable"
+}
