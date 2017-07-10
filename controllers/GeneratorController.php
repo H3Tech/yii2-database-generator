@@ -7,7 +7,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use Yii;
 
-class GenerationController extends Controller
+class GeneratorController extends Controller
 {
     public $enableCsrfValidation = false;
 
