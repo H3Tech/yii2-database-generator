@@ -1,7 +1,7 @@
 # Yii2 Database Generator
 This extension can automatically update the structure of database tables according to field type definitions in models.
 
-## Installation
+## Installing the extension
 The extension can be installed via Composer.
 
 ### Adding the repository
@@ -35,7 +35,7 @@ Then it must be added to the list of bootstrapped items, for example:
 'bootstrap' => ['log', 'h3tech-database-generator'],
 ```
 
-### Preparing the models
+## Preparing the models
 You can activate the automatic database generation by implementing the `SchemaGeneratable` interface in your model.
 So a model's declaration should look something like this:
 ```
@@ -51,7 +51,7 @@ The `fieldTypes()` function of the interface should return an array which has fi
 ```
 It is recommended to use Yii's abstract types. You can find the supported types in the [documentation](http://www.yiiframework.com/doc-2.0/yii-db-schema.html) of the Schema class, in the section Constants.
 
-### Usage and settings
+## Usage and settings
 If you want the tables to automatically update, you must set the parameter `autogenerate` to `true` in the config array of the module.
 
 By default, the extension doesn't do automatic generation, so you must POST the correct access token to the URL `/h3tech-database-generator/generation/run` via the `access_token` field to update the tables.  
