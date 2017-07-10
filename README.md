@@ -41,7 +41,7 @@ So a model's declaration should look something like this:
 ```
 class SomeTestModel extends ActiveRecord implements SchemaGeneratable
 ```
-The `fieldTypes()` function of the interface should return an array which has field names as keys and filed types as values, such as:
+The `fieldTypes()` function of the interface should return an array which has field names as keys and field types as values, such as:
 ```
 [
     'id' => 'pk',
