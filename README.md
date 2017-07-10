@@ -54,8 +54,8 @@ It is recommended to use Yii's abstract types. You can find the supported types 
 ### Usage and settings
 If you want the tables to automatically update, you must set the parameter `autogenerate` to `true` in the config array of the module.
 
-By default, the extension doesn't do automatic generation, so you must POST the correct access token to the URL `/h3tech-database-generator/generation/run` to update the tables.  
-The default access token is 'sudogeneratedb', but can be set to any string via the `accessToken` parameter of the module or turned off completely by setting it to `false`.
+By default, the extension doesn't do automatic generation, so you must POST the correct access token to the URL `/h3tech-database-generator/generation/run` via the `access_token` field to update the tables.  
+The default access token is `sudogeneratedb`, but can be set to any string via the `accessToken` parameter of the module or turned off completely by setting it to `false`.
 
 An example configuration would be the following:
 ```
