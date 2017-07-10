@@ -49,7 +49,7 @@ The `fieldTypes()` function of the interface should return an array which has fi
     'value' => 'integer NOT NULL',
 ]
 ```
-It is recommended to use Yii's abstract types. You can find the supported types in the [documentation](http://www.yiiframework.com/doc-2.0/yii-db-schema.html) of the Schema class, in the section Constants.
+You can use Yii's abstract types. You can find the supported types in the [documentation](http://www.yiiframework.com/doc-2.0/yii-db-schema.html) of the Schema class, in the section Constants.
 
 ## Usage and settings
 If you want the tables to automatically update, you must set the parameter `autogenerate` to `true` in the config array of the module.
