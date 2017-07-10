@@ -27,12 +27,43 @@ The extension must be enabled in Yii's web.php by adding an entry for it in the 
 'modules' => [
     'h3tech-database-generator' => [
         'class' => 'h3tech\databaseGenerator\Module',
-        'autogenerate' => YII_ENV_DEV || YII_ENV_TEST,
-        'accessToken' => '0yppRdbnCkYnidwskUjvvhhv',
     ],
 ]
 ```
 Then it must be added to the list of bootstrapped items, for example:
 ```
 'bootstrap' => ['log', 'h3tech-database-generator'],
+```
+
+### Preparing the models
+You can activate the automatic database generation by implementing the `SchemaGeneratable` interface in your model.
+So a model's declaration should look something like this:
+```
+class SomeTestModel extends ActiveRecord implements SchemaGeneratable
+```
+The `fieldTypes()` function of the interface should return an array which has field names as keys and filed types as values, such as:
+```
+[
+    'id' => 'pk',
+    'name' => 'string(50) NOT NULL',
+    'value' => 'integer NOT NULL',
+]
+```
+It is recommended to use Yii's abstract types. You can find the supported types in the [documentation](http://www.yiiframework.com/doc-2.0/yii-db-schema.html) of the Schema class, in the section Constants.
+
+### Usage and settings
+If you want the tables to automatically update, you must set the parameter `autogenerate` to `true` in the config array of the module.
+
+By default, the extension doesn't do automatic generation, so you must POST the correct access token to the URL `/h3tech-database-generator/generation/run` to update the tables.  
+The default access token is 'sudogeneratedb', but can be set to any string via the `accessToken` parameter of the module or turned off completely by setting it to `false`.
+
+An example configuration would be the following:
+```
+'modules' => [
+    'h3tech-database-generator' => [
+        'class' => 'h3tech\databaseGenerator\Module',
+        'autogenerate' => YII_ENV_DEV || YII_ENV_TEST,
+        'accessToken' => '0yppRdbnCkYnidwskUjvvhhv',
+    ],
+]
 ```
