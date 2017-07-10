@@ -36,7 +36,7 @@ Then it must be added to the list of bootstrapped items, for example:
 ```
 
 ## Preparing the models
-You can activate the automatic database generation by implementing the `SchemaGeneratable` interface in your model.
+You can activate the database generation functionality by implementing the `SchemaGeneratable` interface in your model.
 So a model's declaration should look something like this:
 ```
 class SomeTestModel extends ActiveRecord implements SchemaGeneratable
